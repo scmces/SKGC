@@ -15,29 +15,31 @@
       background: linear-gradient(135deg, #fdf6c3, #a0c4ff);
     }
 
-
-
     .logo-section {
       display: flex;
-      align: center;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      gap: 230px;
     }
 
+
     .logo-section img {
-      height: 100px;
-      margin-right: 400px;
+      height: 80px;      /* Adjust size as needed */
+      margin-bottom: 6px;
     }
 
     .logo-section h1 {
       font-family: 'Times New Roman',Times, serif;
       font-size: 36px;
       color: #1659a8;
-      text-align: top-center;
-      position: relative;
-
+      text-align: center;
+      margin: 5px;
+      padding-left: 15px;
     }
 
-    /*.logo-section h1::after {
+    .logo-section h1::after {
       content: "";
       display: block;
       width: 100%;
@@ -45,12 +47,13 @@
       #background: linear-gradient(to right, #fdd835 0%, #fdd835 45%, #1659a8 55%, #1659a8 100%);
       background: linear-gradient(135deg, #fdd835, #1659a8);
       margin-top: 6px;
-    }*/
+        }
+
 
     .right-section {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 20px;
     }
 
     .phone {
@@ -88,6 +91,7 @@
 .app_book {
   text-align: center;
   margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .flash-link {
@@ -112,9 +116,214 @@
   50% { opacity: 0.2; }
 }
 
-.image-container img {
-  width: 100%;           /* Scales image to full width of the screen */
-  height: auto;          /* Maintains original aspect ratio */
-  display: block;        /* Removes any extra space below the image */
-  margin-top: 15px;      /* Space below your flash heading */
+.calendar-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+  border: 15px solid #fcfcfc;
+}
+
+.calendar-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  text-align: center;
+  padding: 20px;
+  max-width: 800px;
+  flex: 1;
+}
+
+/* Updated cla-cta styling for centering and button appearance */
+.cla-cta {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #1659a8;
+  background-color: #ffffff;
+  border: 2px solid #1659a8;
+  border-radius: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.cla-cta:hover {
+  background-color: #1659a8;
+  color: white;
+  cursor: pointer;
+}
+
+.cla-cta a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+
+.calendar-title {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #1659a8;
+}
+
+.calendar-image {
+  flex: 1;
+  max-width: 500px;
+}
+
+.calendar-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Layout container */
+.calendar-section {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrap on smaller screens */
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Banner Image */
+.calendar-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Calendar box content */
+.calendar-box {
+  flex: 1 1 500px;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Title */
+.calendar-title {
+  font-size: 24px;
+  color: #1659a8;
+  margin-bottom: 10px;
+}
+
+/* Book button */
+.cla-cta {
+  margin: 15px 0;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #1659a8;
+  background-color: #ffffff;
+  border: 2px solid #1659a8;
+  border-radius: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.cla-cta:hover {
+  background-color: #1659a8;
+  color: white;
+  cursor: pointer;
+}
+
+.cla-cta a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  width: 100%;
+}
+
+/* Responsive iframe */
+.calendar-box iframe {
+  width: 100%;
+  height: 500px;
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .calendar-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .calendar-box {
+    max-width: 100%;
+  }
+
+  .calendar-title {
+    font-size: 20px;
+  }
+
+  .cla-cta {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .calendar-box iframe {
+    height: 400px;
+  }
+
+  .calendar-image {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+/**** MAking Responsive *****/
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 5px;
+  }
+
+  .logo-section {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .logo-section img {
+    height: 50px;
+    margin: 0 auto 10px;
+    gap: 0;
+  }
+
+  .logo-section h1 {
+    font-size: 28px;
+    margin: 0;
+  }
+
+  .right-section {
+    flex-direction: column;
+    #gap: 10px;
+  }
+
+  .cta, .phone {
+    font-size: 16px;
+  }
+
+  .social-icons i {
+    font-size: 16px;
+    margin-left: 5px;
+  }
 }
