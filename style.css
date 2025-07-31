@@ -1,0 +1,120 @@
+ body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+       background: linear-gradient(135deg, #fef9e7, #d6eaff);
+       color: #333;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 10px;
+      border-top: 2px solid #eedbd3;
+      border-bottom: 2px solid #eedbd3;
+      background: linear-gradient(135deg, #fdf6c3, #a0c4ff);
+    }
+
+
+
+    .logo-section {
+      display: flex;
+      align: center;
+      text-align: center;
+    }
+
+    .logo-section img {
+      height: 100px;
+      margin-right: 400px;
+    }
+
+    .logo-section h1 {
+      font-family: 'Times New Roman',Times, serif;
+      font-size: 36px;
+      color: #1659a8;
+      text-align: top-center;
+      position: relative;
+
+    }
+
+    /*.logo-section h1::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 4px;
+      #background: linear-gradient(to right, #fdd835 0%, #fdd835 45%, #1659a8 55%, #1659a8 100%);
+      background: linear-gradient(135deg, #fdd835, #1659a8);
+      margin-top: 6px;
+    }*/
+
+    .right-section {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .phone {
+      font-size: 18px;
+      color: #333;
+    }
+
+    .cta {
+      background-color: white;
+      color: #1659a8 ;
+      padding: 10px 20px;
+      border-radius: 0 30px 30px ;
+      font-size: 18px;
+    }
+
+    .cta:hover{
+      background-color: #f9f9f9;
+    }
+
+    .social-icons i {
+      background-color: white;
+      color: #1659a8;
+      padding: 12px;
+      border-radius: 50%;
+      margin-left: 10px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .social-icons i:hover {
+      background-color: grey ;
+    }
+
+
+.app_book {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.flash-link {
+  text-decoration: none;
+}
+
+.flash {
+  font-size: 36px;
+  font-weight: bold;
+  color: #1659a8;
+  animation: flashText 1s infinite;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.flash:hover {
+  color: #3f8600;
+}
+
+@keyframes flashText {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+.image-container img {
+  width: 100%;           /* Scales image to full width of the screen */
+  height: auto;          /* Maintains original aspect ratio */
+  display: block;        /* Removes any extra space below the image */
+  margin-top: 15px;      /* Space below your flash heading */
+}
